@@ -12,17 +12,25 @@
         flex-shrink: 0;
 
         .headerBar {
-            display: flex;
-            flex-direction: row;
+            // display: flex;
+            // flex-direction: row;
             // align-items: stretch; //
+            position: relative;
 
             .menu {
                 // flex: 1;
                 // // padding-left: -100px;
                 // // padding: 10px;s
+                position: absolute;
+                width: 100%;
+
             }
 
-            .aviator {}
+            .aviator {
+                position: absolute;
+                right: 10px;
+                margin: 10px;
+            }
         }
     }
 

@@ -7,24 +7,23 @@ import { Avatar, Badge, Space } from 'antd';
 
 const items = [
     {
-        label: 'Navigation One',
+        label: '城市治理',
         key: 'mail',
         icon: <MailOutlined />,
     },
     {
-        label: 'Navigation Two',
+        label: '文化旅游',
         key: 'app',
         icon: <AppstoreOutlined />,
-        disabled: true,
     },
     {
-        label: 'Navigation Three - Submenu',
+        label: '社会治理',
         key: 'SubMenu',
         icon: <SettingOutlined />,
         children: [
             {
                 type: 'group',
-                label: 'Item 1',
+                label: '公安系统',
                 children: [
                     {
                         label: 'Option 1',
