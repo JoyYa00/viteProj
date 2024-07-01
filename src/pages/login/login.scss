@@ -1,0 +1,35 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // 内容自适应：上下居中
+    align-items: center; // 子项对齐方式：左右居中
+    background: url('@/assets/loginbg3.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/loginbg3.jpg') no-repeat 0% 20%/ cover;
+
+
+    .loginForm {
+        background-color: rgba(255, 255, 255, 0.2);
+
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // 内容自适应：上下居中
+        align-items: center; // 子项对齐方式：左右居中
+        // border: 2px solid rgb(22, 119, 255);
+        border: 2px solid rgb(255, 255, 255);
+
+        border-radius: 5px;
+
+        .title {
+            margin: 5px;
+            color: black;
+        }
+    }
+
+    .forgetPassword {}
+}
