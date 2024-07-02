@@ -1,29 +1,19 @@
 .homeMain {
     display: flex;
     flex-direction: column;
-    // width: 100vw;
-    // height: 100vh;
     background-color: white;
 
     .header {
         height: 46px;
         box-shadow: 2px 5px 5px 0px rgba(102, 102, 102, 0.5);
-        // background: aqua;
         flex-shrink: 0;
 
         .headerBar {
-            // display: flex;
-            // flex-direction: row;
-            // align-items: stretch; //
             position: relative;
 
             .menu {
-                // flex: 1;
-                // // padding-left: -100px;
-                // // padding: 10px;s
                 position: absolute;
                 width: 100%;
-
             }
 
             .aviator {
@@ -36,7 +26,6 @@
 
     .content {
         flex-grow: 2;
-        // background: cornflowerblue;
         overflow-y: auto;
     }
 
