@@ -4,16 +4,16 @@ import { Menu } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar, Badge, Space } from 'antd';
 import CityManage from '../cityManage/cityManage';
-
+import TravelManage from '../travelManage/travelManage';
 
 const items = [
     {
         label: '城市治理',
-        key: 'mail',
+        key: 'city',
     },
     {
         label: '文化旅游',
-        key: 'app',
+        key: 'travel',
     },
     {
         label: '社会治理',
@@ -61,40 +61,46 @@ const items = [
     },
     {
         label: '智能环卫',
-        key: 'app',
+        key: 'huanwei',
     },
 ];
 
-const Header = () => {
-    const [current, setCurrent] = useState('mail');
-    const onClick = (e) => {
-        console.log('click ', e);
-        setCurrent(e.key);
-    };
-    return (
-        <div className='headerBar'>
-            <div className='menu'>
-                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
-            </div>
-            <div className='aviator'>
-                <Space size={24}>
-                    <Badge count={1}>
-                        <Avatar shape="square" icon={<UserOutlined />} />
-                    </Badge>
-                </Space>
-            </div>
+const keyMap = {
+    'city': <CityManage />,
+    'travel': <TravelManage />
+}
 
-        </div>
-    );
-};
 export default function Home() {
+    const [current, setCurrent] = useState('city');
+
+    const Header = () => {
+        const onClick = (e) => {
+            console.log('click ', e);
+            setCurrent(e.key);
+        };
+        return (
+            <div className='headerBar'>
+                <div className='menu'>
+                    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+                </div>
+                <div className='aviator'>
+                    <Space size={24}>
+                        <Badge count={1}>
+                            <Avatar shape="square" icon={<UserOutlined />} />
+                        </Badge>
+                    </Space>
+                </div>
+
+            </div>
+        );
+    };
     return (
         <div className='homeMain'>
             <div className='header'>
                 <Header />
             </div>
             <div className='content'>
-                <CityManage />
+                {keyMap[current]}
             </div>
             {/* <div className="footer">这里是尾部</div> */}
         </div>

@@ -1,6 +1,11 @@
 .citymain {
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 45px);
+    overflow: hidden;
+    // background: url('@/assets/bg.jpg') no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
+    background-color: rgba(128, 187, 217, 0.3);
     /* position: relative; */
 
 }
@@ -9,12 +14,18 @@
     position: 'absolute';
     z-index: 100;
     background-color: 'rgba(255,255,255,0.5)';
+    overflow: hidden;
+
 }
 
 .simulate {
-    width: 100%;
-    height: calc(100vh - 60px);
+    width: 52%;
+    height: calc(100vh - 70px);
     position: absolute;
+    overflow: hidden;
+
+    left: 24%;
+    top: 70px
 }
 
 .left {
@@ -24,9 +35,32 @@
     z-index: 2;
 }
 
-.leftBox1 {
+.chartBox {
     height: 30%;
     padding: 15px;
+
+
+    .boxContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        padding: 15px;
+
+        .title {
+            height: 32px;
+            // background-color: pink;
+        }
+
+        .content {
+            flex-grow: 1;
+            overflow: hidden;
+            color: white;
+            // background-color: aquamarine;
+        }
+    }
+
 }
 
 .right {
